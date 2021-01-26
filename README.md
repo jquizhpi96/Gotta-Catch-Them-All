@@ -43,14 +43,13 @@ After clickng the button the page will transition downward to another frame wher
 - The pokemon will be jumping in and out of the grass at random.
 - Allow user to click on the pokemon signifying that they caught the pokemon.
 - There will be a time limit of 30 seconds to catch them all.
-- Once caught you will get a brief information of the pokemon's name and type as well as their audio.
-- There will be a score board and progress bar to track how many pokemon the user caught.
 - If the user beat the time limit, the user will get a congratulations alert with the pokemon caught, otherwise they will get the option to restart.
 - Different types of pokemon will generate every time the game restarts .
 
 
 #### PostMVP  
- 
+- Once caught you will get a brief information of the pokemon's name and type as well as their audio.
+- There will be a score board and progress bar to track how many pokemon the user caught.
 
 ## Project Schedule
 
