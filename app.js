@@ -1,31 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
-  
-
   let list = document.getElementById('#Pokemon')
-
   // let pokemon = document.querySelectorAll(".image")
-
-
   function fetchPokemon(id, num) {
-
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
-    
       .then(res => res.json())
       .then(pokemon => {
         showPokemon(pokemon, num)
-      
-        // function randtime(min, max) {
-        //   return Math.round(Math.random() * (max - min) + min);
-        // }
-      
-        // randtime(20, 2000)
-    
         
-     
       });
-  
   }
-
   function createPokemons() {
     let firstPokemon = Math.round(Math.random() * 750)
     let secondPokemon = Math.round(Math.random() * 750)
@@ -39,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let tenthPokemon = Math.round(Math.random() * 750)
     let eleventhPokemon = Math.round(Math.random() * 750)
     let twelvethPokemon = Math.round(Math.random() * 750)
-  
     fetchPokemon(firstPokemon, 1)
     fetchPokemon(secondPokemon, 2)
     fetchPokemon(thirdPokemon, 3)
@@ -52,128 +34,57 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchPokemon(tenthPokemon, 10)
     fetchPokemon(eleventhPokemon, 11)
     fetchPokemon(twelvethPokemon, 12)
- 
-
   }
   createPokemons()
-
   function showPokemon(pokemon, num) {
     let item = document.querySelector(`#pokemon-${num}`)
     let image = item.getElementsByTagName('img')[0]
     image.setAttribute("src", pokemon.sprites.front_default)
-  
-  
   }
 
-  // function randTime(min, max) {
-  //   return Math.round(Math.random() * (max - min) + min);
-  //}
+  
  
   const start = document.querySelector('#start')
   const scoreBoard = document.querySelector('#score')
   const grass = document.querySelectorAll(".grass")
-
   const img = document.querySelectorAll(".pokemon")
   console.log(img)
-
-  let lastGrass;
-  let timeUp = false;
+  let lastImage;
+  // let timeUp = false;
   let timeLimit = 20000;
   let score = 0;
   let countDown;
-
-function pickRandomnPokemon(grass) {
-    const randomGrass = Math.floor(Math.random() * grass.length);
-    
-    const grasses = grass[randomGrass];
-    if (grasses === lastGrass) {
-      return pickRandomnPokemon(grasses);
-
-    }
-    lastGrass = grasses;
-    return grasses
-}
-  //console.log( pickRandomnGrass(grass))
   
-
-  //getting the pokemon to jump
-
-
+  function pickRandomnPokemon(img) {
+    const randomImage = Math.floor(Math.random() * img.length);
+    //console.log(randomImage)
+    const images = img[randomImage];
+    if (images === lastImage) {
+      return pickRandomnPokemon(images);
+    }
+    lastImage = images;
+    return images;
+  }
+   
   function peep() {
-    // const time = Math.random() * 2000;
-    // querySelector('.grass').style.height
-    console.log(document.querySelector('.grass').style)
+  
+    let startingBottomValue = 50
     const image = pickRandomnPokemon(img)
-    console.log(image)
-    const moveImg = function (image) {
-      // image.style.left = Math.random() * window.innerWidth + 'px'
-      // image.style.top = 
-      
-        console.log(moveImg)}
+    //console.log(image)
     
+    const moveImg = function (image) {
+     
+      image.style.bottom = startingBottomValue + 100 + 'px'
+      setTimeout(() => {
+        image.style.bottom = startingBottomValue + 'px'
+      }, 250)
+      if (!timeLimit) peep();
+      // console.log(moveImg)
+    }
     setInterval(() => {
       (moveImg(image))
     }, 1000);
-  //   image.classList.add('up');
-  //   setTimeout(function () { 
-  //     image.classList.remove('up');
-  //     if (!timeUp) peep();
-  //   }, 200); 
-  } peep()
-
-  // 2nd attempted
- 
-  // setInterval(
-  //   function () {
-  //     let image = document.querySelectorAll('.image')
-  //     console.log(image)
-  //       image.classList.toggle('jump')
-  //     }, 250);
-    
-  // function movePokemon() {
-  //   list.style.top = (Math.random() * window.innerHeight  + 'px');
-  // }
-  // movePokemon()
-
+  }
+  peep()
   
-
-
 })
-
-
-
-
-
-
-// const fetchData = async (id,num) => {
-//   try {
-//     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
-//     const data = await res.json()
-//     //console.log(data)
-//     pokeImage1(data)
-//     pokeImage2(data)
-//   } catch (err) {
-//     console.log(err)
-//   }
-
-// }
-// fetchData(pokemon)
-
-// const pokeImage1 = (pokemon) => {
-//   console.log(pokemon)
-//   let image1 = document.querySelectorAll('.image')[0]
-//   console.log(image1)
-//   image1.setAttribute("src", pokemon.sprites.front_default)
-// }
-
-// const pokeImage2 = (pokemon) => {
-//   let image2 = document.querySelectorAll('.image')[1]
-//   console.log(image2)
-//   image2.setAttribute("src", pokemon.sprites.front_default)
-// }
-
-
-     
-
-
-  

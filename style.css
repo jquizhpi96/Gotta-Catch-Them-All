@@ -7,7 +7,6 @@ body {
 title {
   display: none;
 }
-
 /* .wrapper {
   border: 3px solid black;
   width: 800px;
@@ -16,10 +15,8 @@ title {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   overflow: hidden;
 } */
-
 button {
   display: flex;
   margin: auto;
@@ -31,60 +28,56 @@ h3 {
   display: flex;
   justify-content: center;
 }
-
 .game {
   border: 3px solid black;
-  width: 800px;
-  height: 800px;
-  margin: 70px auto;
-  /* z-index: 200; */
   display: flex;
   flex-wrap: wrap;
 }
-
-
 .grass {
   position: relative;
-  /* display: block; */
-  background-image: url(grass.png);
   flex: 1 0 25%;
-  background-repeat: no-repeat;
-  width: 100px;
+  height: 220px;
+}
+.grass::after {
+  content: '';
+  display: block;
+  background-image: url(grass.png);
+  width: 100%;
   height: 250px;
-  z-index: 100;
-  /* bottom: -30px; */
   background-size: cover;
-  overflow: hidden;
- 
-  
 }
 
 .pokemon{
   position: absolute;
-  bottom: 0;
-  z-index: 1;
-
+  bottom: 50px;
+  z-index: -1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
 }
 .image {
-  
-  bottom: 0; 
-  transition: top 2s, left 2s;
+  transition: all 0.4s;
   transition-timing-function: linear;
-  /* position: absolute; */
-  /* top: 0%; */
-  height: 75%;
-  width: 75%;
+  height: 75px;
+  width: 75px;
   background-position: bottom;
-  
+  top: 100%;
 }
-/* .image.up .image {
-  top: -5px;
+.pokemon-active {
+  transform: scale(1,0);
+  transform-origin: bottom;
+  transition: transform .5s linear ;
+}
+
+/* 
+image.up .image{
+top: 0%;
 } */
 /* top: 100%;
   width: 100%;
   height: 100%;
 } 
-
 /* @keyframes appear {
   from {
     bottom: -60px;
@@ -92,30 +85,3 @@ h3 {
   to {
     bottom: 0;
   }
-
-.image {
-  transition: top 2s;
-  transition-timing-function: linear;
-  background-repeat: no-repeat;
-  transform-origin: bottom;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-} */
-/* .image.up {
-  top: 0;
-}
-.image {
-  animation-name: image;
-  animation-timing-function: ease;
-}
-@keyframes image {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-200px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
