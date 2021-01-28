@@ -42,25 +42,23 @@ h3 {
   flex-wrap: wrap;
 }
 .grass {
-  /* align-content: center; */
-
   flex: 1 0 25%;
   position: relative;
   overflow: hidden;
-  /* justify-content: space-between; */
+  
 }
 
-.grass.after {
+.grass:after {
   content: "";
   display: block;
-  background-image: url("https://banner2.cleanpng.com/20181118/eoh/kisspng-sweet-grass-vetiver-commodity-wheatgrass-plant-ste-grass-patch-small-v2-sansar-store-5bf22a47a55005.8568679115425971916771.jpg");
-
+  background-image: url("https://www.clipartmax.com/png/middle/56-564761_grass-clipart-image-green-transparent-background-grass-clipart.png");
   position: absolute;
   width: 100%;
   height: 70px;
   z-index: 2;
   bottom: -30px;
   background-size: contain;
+  overflow: hidden;
 }
 .image {
   /* animation: appear 0.3 linear;
@@ -88,7 +86,7 @@ h3 {
     bottom: 0;
   }
 
-/* .image {
+.image {
   transition: top 2s;
   transition-timing-function: linear;
   background-repeat: no-repeat;
@@ -113,4 +111,4 @@ h3 {
   100% {
     transform: translateY(0);
   }
-} */
+}
