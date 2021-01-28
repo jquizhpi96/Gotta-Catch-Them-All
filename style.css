@@ -45,33 +45,39 @@ h3 {
   flex: 1 0 25%;
   position: relative;
   overflow: hidden;
+  z-index: 2
+  
   
 }
 
 .grass:after {
   content: "";
   display: block;
-  background-image: url("https://www.clipartmax.com/png/middle/56-564761_grass-clipart-image-green-transparent-background-grass-clipart.png");
+  background-image: url("https://toppng.com/uploads/preview/rass-clipart-clear-background-clipart-transparent-background-grass-115629938225qiiqv7yem.png");
   position: absolute;
+  background-color: transparent;
+  background-repeat: no-repeat;
   width: 100%;
-  height: 70px;
+  height: 100%;
   z-index: 2;
   bottom: -30px;
-  background-size: contain;
+  background-size: cover;
   overflow: hidden;
+ 
+  
 }
 .image {
   /* animation: appear 0.3 linear;
-  pointer-events: none;
-  bottom: 0; */
+  pointer-events: none;*/
+  bottom: 0; 
   transition: all 0.4s;
   top: 0%;
   height: 75%;
   width: 75%;
   background-position: bottom;
 }
-.hole.up .image {
-  top: 0;
+.image.up .grass {
+  top: -5px;
 }
 /* top: 100%;
   width: 100%;

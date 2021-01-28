@@ -95,15 +95,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function peep() {
     const time = Math.random() * 1300 + 400;
-    const hole = pickRandomnGrass(grass)
-    hole.classList.add('up');
+    const image = pickRandomnGrass(grass)
+    console.log(image)
+    image.classList.add('up');
     setTimeout(function () { 
-      hole.classList.remove('up');
+      image.classList.remove('up');
       if (!timeUp) peep();
     }, time); 
-  }
-
-  peep();
+  } peep()
 
   
 
