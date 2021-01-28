@@ -72,8 +72,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const start = document.querySelector('#start')
   const scoreBoard = document.querySelector('#score')
   const grass = document.querySelectorAll(".grass")
-  console.log(grass)
-  const img = document.querySelectorAll(".image")
+
+  const img = document.querySelectorAll(".pokemon")
   console.log(img)
 
   let lastGrass;
@@ -82,32 +82,43 @@ document.addEventListener('DOMContentLoaded', () => {
   let score = 0;
   let countDown;
 
-function pickRandomnGrass(grass) {
+function pickRandomnPokemon(grass) {
     const randomGrass = Math.floor(Math.random() * grass.length);
     
     const grasses = grass[randomGrass];
     if (grasses === lastGrass) {
-      return pickRandomnGrass(grasses);
+      return pickRandomnPokemon(grasses);
 
     }
     lastGrass = grasses;
     return grasses
 }
-  console.log( pickRandomnGrass(grass))
+  //console.log( pickRandomnGrass(grass))
   
 
   //getting the pokemon to jump
 
 
   function peep() {
-    const time = Math.random() * 1300 + 400;
-    const image = pickRandomnGrass(grass)
+    // const time = Math.random() * 2000;
+    // querySelector('.grass').style.height
+    console.log(document.querySelector('.grass').style)
+    const image = pickRandomnPokemon(img)
     console.log(image)
-    image.classList.add('up');
-    setTimeout(function () { 
-      image.classList.remove('up');
-      if (!timeUp) peep();
-    }, time); 
+    const moveImg = function (image) {
+      // image.style.left = Math.random() * window.innerWidth + 'px'
+      // image.style.top = 
+      
+        console.log(moveImg)}
+    
+    setInterval(() => {
+      (moveImg(image))
+    }, 1000);
+  //   image.classList.add('up');
+  //   setTimeout(function () { 
+  //     image.classList.remove('up');
+  //     if (!timeUp) peep();
+  //   }, 200); 
   } peep()
 
   // 2nd attempted

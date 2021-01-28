@@ -8,7 +8,7 @@ title {
   display: none;
 }
 
-.wrapper {
+/* .wrapper {
   border: 3px solid black;
   width: 800px;
   height: 800 px;
@@ -18,7 +18,7 @@ title {
   transform: translate(-50%, -50%);
 
   overflow: hidden;
-}
+} */
 
 button {
   display: flex;
@@ -35,50 +35,51 @@ h3 {
 .game {
   border: 3px solid black;
   width: 800px;
-  height: 800 px;
+  height: 800px;
   margin: 70px auto;
-  z-index: 200;
+  /* z-index: 200; */
   display: flex;
   flex-wrap: wrap;
 }
-.grass {
-  flex: 1 0 25%;
-  position: relative;
-  overflow: hidden;
-  z-index: 2
-  
-  
-}
 
-.grass:after {
-  content: "";
-  display: block;
-  background-image: url(https://toppng.com/uploads/preview/rass-clipart-clear-background-clipart-transparent-background-grass-115629938225qiiqv7yem.png);
-  position: absolute;
-  background-color: transparent;
+
+.grass {
+  position: relative;
+  /* display: block; */
+  background-image: url(grass.png);
+  flex: 1 0 25%;
   background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  bottom: -30px;
+  width: 100px;
+  height: 250px;
+  z-index: 100;
+  /* bottom: -30px; */
   background-size: cover;
   overflow: hidden;
  
   
 }
+
+.pokemon{
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+
+}
 .image {
-  /* animation: appear 0.3 linear;
-  pointer-events: none;*/
+  
   bottom: 0; 
-  transition: all 0.4s;
-  top: 0%;
+  transition: top 2s, left 2s;
+  transition-timing-function: linear;
+  /* position: absolute; */
+  /* top: 0%; */
   height: 75%;
   width: 75%;
   background-position: bottom;
+  
 }
-.image.up .grass {
+/* .image.up .image {
   top: -5px;
-}
+} */
 /* top: 100%;
   width: 100%;
   height: 100%;
