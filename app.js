@@ -68,6 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // function randTime(min, max) {
   //   return Math.round(Math.random() * (max - min) + min);
   //}
+ 
   const start = document.querySelector('#start')
   const scoreBoard = document.querySelector('#score')
   const grass = document.querySelectorAll(".grass")
@@ -81,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let score = 0;
   let countDown;
 
-  function pickRandomnGrass(grass) {
+function pickRandomnGrass(grass) {
     const randomGrass = Math.floor(Math.random() * grass.length);
     
     const grasses = grass[randomGrass];
@@ -91,7 +92,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     lastGrass = grasses;
     return grasses
-  }
+}
+  console.log( pickRandomnGrass(grass))
+  
+
+  //getting the pokemon to jump
+
 
   function peep() {
     const time = Math.random() * 1300 + 400;
@@ -103,6 +109,20 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!timeUp) peep();
     }, time); 
   } peep()
+
+  // 2nd attempted
+ 
+  // setInterval(
+  //   function () {
+  //     let image = document.querySelectorAll('.image')
+  //     console.log(image)
+  //       image.classList.toggle('jump')
+  //     }, 250);
+    
+  // function movePokemon() {
+  //   list.style.top = (Math.random() * window.innerHeight  + 'px');
+  // }
+  // movePokemon()
 
   
 

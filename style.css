@@ -53,7 +53,7 @@ h3 {
 .grass:after {
   content: "";
   display: block;
-  background-image: url("https://toppng.com/uploads/preview/rass-clipart-clear-background-clipart-transparent-background-grass-115629938225qiiqv7yem.png");
+  background-image: url(https://toppng.com/uploads/preview/rass-clipart-clear-background-clipart-transparent-background-grass-115629938225qiiqv7yem.png);
   position: absolute;
   background-color: transparent;
   background-repeat: no-repeat;
