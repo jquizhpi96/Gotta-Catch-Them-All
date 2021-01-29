@@ -1,5 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
  // fetching api data.
+//  async function fetchOrigPokes(pokemonName) {
+//   const allPokemon = `https://pokeapi.co/api/v2/pokemon/${id}`
+ 
+
+//   try {
+//     const response = await axios.get(`${allPokemon}${pokemonName}`)
+//      console.log(response.data)
+
+//     let data = response.data
+//     showPokeData(data)
+//     //console.log(showPokeData)
+
+//     const descriptions = await axios.get(`${pokeDescr}${pokemonName}`)
+//     let descriptionsData = descriptions.data
+//     showPokeDescription(descriptionsData)
+
+//   } catch (error) {
+//    // alert(`Ooops! It looks like you didn't enter anything or what you entered was spelled incorrectly, try again!`)
+//   }
+// }
+//fetchOrigPokes('id')
+
   function fetchPokemon(id, num) {
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
       .then(res => res.json())
@@ -8,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
       });
   } //appending elements to the DOM.
+ 
   function createPokemons() {
     let firstPokemon = Math.round(Math.random() * 750)
     let secondPokemon = Math.round(Math.random() * 750)
@@ -44,69 +67,79 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //making the pokemon to jump
 
-  const start = document.querySelector('#start')
+  
+  const start = document.querySelector('#button')
   const scoreBoard = document.querySelector('#score')
   const grass = document.querySelectorAll(".grass")
   const img = document.querySelectorAll(".pokemon")
-  //console.log(img)
+  
 
   
+  function randomTime(min, max) {
+    return Math.round(Math.random() * (max - min) + min)
+   
+   
+ }
+ //console.log(randomTime(200, 1000))
   
-  let lastImage;
+  // let lastImage;
   let timeLimit = 20000;
   let score = 0;
   let countDown;
+  const pokemons = document.querySelectorAll(".image")
 
- 
-  function pickRandomnPokemon(img) {
-    const randomImage = Math.floor(Math.random() * img.length);
-    //console.log(randomImage)
-    const images = img[randomImage];
-    console.log(images)
-    if (images === lastImage) {
-      return pickRandomnPokemon(images);
-    }
-    lastImage = images;
   
-    return images;
-  }
+
+  // function pickRandomnPokemon() {
+  //   const randomImage = Math.floor(Math.random() * img.length);
+  //  // console.log(randomImage)
+  //   const images = img[randomImage];
+  //   console.log(images)
+  //   if (images === lastImage) {
+  //     return pickRandomnPokemon(images);
+  //   }
+  //   lastImage = images;
+  
+  //   return images;
+  // }
    
-  function peep() {
+  // function jump() {
   
-    let startingBottomValue = 50
-    const image = pickRandomnPokemon(img)
-    console.log(image)
+  //   let startingBottomValue = 50
+  //   const image = randomPokemon(img)
+  //   // console.log(image)
     
-    const moveImg = function (image) {
+  //   const moveImg = function (image) {
      
-      image.style.bottom = startingBottomValue + 100 + 'px'
-      setTimeout(() => {
-        image.style.bottom = startingBottomValue + 'px'
-      }, 1000)
-      if (!timeLimit) peep();
-      // console.log(moveImg)
-    }
-    setInterval(() => {
-      (moveImg(image))
-    }, 2000);
+  //     image.style.bottom = startingBottomValue + 100 + 'px'
+  //     setTimeout(() => {
+  //       image.style.bottom = startingBottomValue + 'px'
+  //     }, 1000)
+  //     if (!timeLimit) jump();
+  //     // console.log(moveImg)
+  //   }
+  //   setInterval(() => {
+  //     (moveImg(image))
+  //   }, 2000);
+  // }
+  // jump()
+  
+  // //removing pokemon
+
+  function removePokemon() {
+    let pokemon = document.querySelectorAll('.image')
+    console.log(pokemon)
+     pokemon.remove()
   }
-  peep()
-
-  //removing pokemon
-
-//   function removePokemon() {
-//     let pokemon = document.querySelectorAll('.pokemon')
-//     console.log(pokemon)
-//     pokemon.removeChild(pokemon.childNode)
-//   }
-// removePokemon()
+  removePokemon()
   
 
 // function checkForWinner() {
 //   if (document.querySelectorAll('.pokemon').length === 0) {
-//     alert('You win!')
+//     console.log('You win!')
 //   }
 // }
+//   checkForWinner()
  
   
 })

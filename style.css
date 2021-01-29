@@ -5,29 +5,19 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-image: url("https://pa1.narvii.com/7288/b0bac31a96f24b565cc4742d3c35879eb0ed5b15r1-700-394_hq.gif");
   background-repeat: no-repeat;
-  background-size:contain;
+  background-size: contain;
   position: relative;
-  background-color: #A6E1FA;
+  background-color: #a6e1fa;
 }
 /* .background{
 background-image: url("https://media-s3-us-east-1.ceros.com/hype-beast/images/2018/07/13/a9a51bc0b8d626db493ab5f9a971b043/background-hero.png");
 
 } */
 
-img.title{
-  
+img.title {
   margin-top: 100px;
 }
-/* .wrapper {
-  border: 3px solid black;
-  width: 800px;
-  height: 800 px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  overflow: hidden;
-} */
+
 button {
   display: flex;
   margin: auto;
@@ -47,64 +37,56 @@ h3 {
   box-sizing: border-box;
   margin-left: 200px;
   margin-right: 200px;
-  
 }
-
 
 .grass {
   position: relative;
   flex: 1 0 25%;
   height: 220px;
-  
 }
 .grass::after {
-  content: '';
+  content: "";
   display: block;
   background-image: url(grass.png);
   width: 100%;
   height: 250px;
   background-size: cover;
-  
-  
 }
 
-.pokemon{
+.pokemon {
   position: absolute;
   bottom: 10px;
   z-index: -2;
   width: 100%;
   display: flex;
   justify-content: center;
-  
-  
 }
 .image {
   transition: all 0.4s;
   transition-timing-function: linear;
   height: 75px;
   width: 75px;
-  background-position: bottom;
-  
+  transform-origin: bottom;
+
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+
+  animation-name: jump;
+  animation-timing-function: ease;
 }
 
-/* .pokemon-active {
-  transform: scale(1,0);
-  transform-origin: bottom;
-  transition: transform .5s linear ;
-} */
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-150px);
+  }
 
-/* 
-image.up .image{
-top: 0%;
-} */
-/* top: 100%;
-  width: 100%;
-  height: 100%;
-} 
-/* @keyframes appear {
-  from {
-    bottom: -60px;
+  60% {
+    transform: translateY(0px);
   }
-  to {
-    bottom: 0;
+  100% {
+    transform: translateY(0);
   }
+}
