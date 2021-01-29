@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  let list = document.getElementById('#Pokemon')
-  // let pokemon = document.querySelectorAll(".image")
+ // fetching api data.
   function fetchPokemon(id, num) {
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
       .then(res => res.json())
@@ -8,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         showPokemon(pokemon, num)
         
       });
-  }
+  } //appending elements to the DOM.
   function createPokemons() {
     let firstPokemon = Math.round(Math.random() * 750)
     let secondPokemon = Math.round(Math.random() * 750)
@@ -42,27 +41,33 @@ document.addEventListener('DOMContentLoaded', () => {
     image.setAttribute("src", pokemon.sprites.front_default)
   }
 
-  
- 
+
+  //making the pokemon to jump
+
   const start = document.querySelector('#start')
   const scoreBoard = document.querySelector('#score')
   const grass = document.querySelectorAll(".grass")
   const img = document.querySelectorAll(".pokemon")
-  console.log(img)
+  //console.log(img)
+
+  
+  
   let lastImage;
-  // let timeUp = false;
   let timeLimit = 20000;
   let score = 0;
   let countDown;
-  
+
+ 
   function pickRandomnPokemon(img) {
     const randomImage = Math.floor(Math.random() * img.length);
     //console.log(randomImage)
     const images = img[randomImage];
+    console.log(images)
     if (images === lastImage) {
       return pickRandomnPokemon(images);
     }
     lastImage = images;
+  
     return images;
   }
    
@@ -70,21 +75,40 @@ document.addEventListener('DOMContentLoaded', () => {
   
     let startingBottomValue = 50
     const image = pickRandomnPokemon(img)
-    //console.log(image)
+    console.log(image)
     
     const moveImg = function (image) {
      
       image.style.bottom = startingBottomValue + 100 + 'px'
       setTimeout(() => {
         image.style.bottom = startingBottomValue + 'px'
-      }, 250)
+      }, 1000)
       if (!timeLimit) peep();
       // console.log(moveImg)
     }
     setInterval(() => {
       (moveImg(image))
-    }, 1000);
+    }, 2000);
   }
   peep()
+
+  //removing pokemon
+
+//   function removePokemon() {
+//     let pokemon = document.querySelectorAll('.pokemon')
+//     console.log(pokemon)
+//     pokemon.removeChild(pokemon.childNode)
+//   }
+// removePokemon()
+  
+
+// function checkForWinner() {
+//   if (document.querySelectorAll('.pokemon').length === 0) {
+//     alert('You win!')
+//   }
+// }
+ 
   
 })
+
+

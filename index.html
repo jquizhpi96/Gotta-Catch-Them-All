@@ -6,17 +6,20 @@
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="./app.js"></script>
   <link rel="stylesheet" href="./style.css">
+ 
 <title>Gotta Catch Them All</title>
 </head>
 <body>
-  <header>
-  <h1>Gotta Catch Them All</h1>
-  <h2>Can you be the next Pokemon Master?</h2>
+  <header id= 'header'>
+  <h1>
+    <img class= "title"src="https://fontmeme.com/permalink/210129/2b9b8976400dcf78ee450c643736b41d.png" alt="pokemon-font",border="0"></h1>
+  <h2><img src="https://fontmeme.com/permalink/210129/75b7fe667a0ebc5d49e43383175e7a8a.png" alt="pokemon-font",border="0"></a></h2>
   </header>
-  <button id="start">Start</a></button>
+  <button  id="button" onclick="window.location.href='#start'">Start</button>
 
-<h3 id="score">0/12</h3>
-  <div class= "game">
+  
+
+  <div id='start' class= "game"> 
      <div class="grass grass 1">
       <div class="pokemon" id="pokemon-1">
           <img src= "" class= "image"></div>
@@ -81,8 +84,9 @@
     
     </div>
      
+    <button  id="restart" onclick="window.location.href='#header'">Restart</button>
 
-    <button id="restart"><a href ="#h1">Restart</a></button>
+    
     
 </body>
 </html>
