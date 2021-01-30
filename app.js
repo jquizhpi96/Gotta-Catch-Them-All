@@ -4,21 +4,21 @@
 
 async function fetchPokemon() {
   for (let i = 1; i <= 150; i++) {
+    const allPokemon = `https://pokeapi.co/api/v2/pokemon/${i}`
     try {
-      const allPokemon = `https://pokeapi.co/api/v2/pokemon/${i}`
-      const response = await axios.get(allPokemon)
+     let response = await axios.get(allPokemon)
       //console.log(response.data)
-      let data = response.data.sprites.front_default
-     // console.log(data)
+      const data = response.data.sprites.front_default
+     console.log(data)
     
     } catch (error) {
-    
+      console.log(error)
     }
   }
 }   
+fetchPokemon()
 
-
-  let div = document.querySelector("#game")
+  let div = document.querySelector(".image")
   console.log(div)
 
 // function createPokemon() {
