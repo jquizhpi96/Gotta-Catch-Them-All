@@ -3,136 +3,79 @@
  // const name = await axios.get(`https://cors-anywhere.herokuapp.com/${url.name}`)
 
 async function fetchPokemon() {
-  for (let i = 1; i <= 150; i++) {
-    const allPokemon = `https://pokeapi.co/api/v2/pokemon/${i}`
+    let randomPokemonIndex = Math.round(Math.random() * 150)
+    const onePokemon = `https://pokeapi.co/api/v2/pokemon/${randomPokemonIndex}`
     try {
-     let response = await axios.get(allPokemon)
-      //console.log(response.data)
-      const data = response.data.sprites.front_default
-     console.log(data)
+      let response = await axios.get(onePokemon)
     
+      let div = document.createElement('div')
+      div.setAttribute("class", 'grass')
+      
+
+      let secondDiv = document.createElement('div')
+      secondDiv.setAttribute("class", 'pokemon')
+    
+     let imageofPokemon = document.createElement('img')
+      imageofPokemon.setAttribute('src', response.data.sprites.front_default)
+      imageofPokemon.setAttribute('alt', "pokemonImage")
+      imageofPokemon.setAttribute('class', 'image')
+      
+      secondDiv.append(imageofPokemon)
+      div.append(secondDiv)
+      
+     let mainDiv = document.querySelector("#start")
+      mainDiv.append(div)
+    
+      // create the div under response
+      // append to DOM
+      // create image, src,
+      checkForWinner()
+        removePokemon()
+        
+       
     } catch (error) {
       console.log(error)
-    }
+    
   }
 }   
 fetchPokemon()
-
-  let div = document.querySelector(".image")
-  console.log(div)
-
-// function createPokemon() {
-//   let appendingPokemon = Math.round(Math.random() * 150)
-//   console.log(appendingPokemon)
-// }
-// createPokemon()
-// const showPokeImage = ((pokemon) => {
-//   const pokeImage = `
-//   <img src='${pokemon.sprites.front_default}' alt ='Pokemon Image' class='image'>
-// `
-// })
-// console.log(showPokeImage)
-  // //appending elements to the DOM.
- 
-  //  function createPokemons() {
-  //   let firstPokemon = Math.round(Math.random() * 750)
-  //   let secondPokemon = Math.round(Math.random() * 750)
-  //   let thirdPokemon = Math.round(Math.random() * 750)
-  //   let fourthPokemon = Math.round(Math.random() * 750)
-  //   let fifthPokemon = Math.round(Math.random() * 750)
-  //   let sixthPokemon = Math.round(Math.random() * 750)
-  //   let sevenPokemon = Math.round(Math.random() * 750)
-  //   let eighthPokemon = Math.round(Math.random() * 750)
-  //   let ninethPokemon = Math.round(Math.random() * 750)
-  //   let tenthPokemon = Math.round(Math.random() * 750)
-  //   let eleventhPokemon = Math.round(Math.random() * 750)
-  //   let twelvethPokemon = Math.round(Math.random() * 750)
-    // fetchPokemon(firstPokemon)
-    // fetchPokemon(secondPokemon)
-    // fetchPokemon(thirdPokemon)
-    // fetchPokemon(fourthPokemon)
-    // fetchPokemon(fifthPokemon)
-    // fetchPokemon(sixthPokemon)
-    // fetchPokemon(sevenPokemon)
-    // fetchPokemon(eighthPokemon)
-    // fetchPokemon(ninethPokemon)
-    // fetchPokemon(tenthPokemon)
-    // fetchPokemon(eleventhPokemon)
-    // fetchPokemon(twelvethPokemon)
-  //}
-//   createPokemons()
-//  function showPokemon() {
-   
-//   let image = document.createElement('img')
-//      console.log(image)
-//    image.setAttribute("src", pokemon.sprites.front_default)
-
-//    }
+fetchPokemon()
+fetchPokemon()
+fetchPokemon()
+fetchPokemon()
+fetchPokemon()
+fetchPokemon()
+fetchPokemon()
+fetchPokemon()
+fetchPokemon()
+fetchPokemon()
+fetchPokemon()
 
 
+function removePokemon() {
+  let pokemon = document.querySelectorAll('.pokemon')
+  console.log(pokemon)
+  // pokemons.style.display = 'none'
+  e.target.remove()
+}
+console.log(pokemon)
+pokemon.forEach((poke) => {
+    console.log('hi')
+  poke.addEventListener('click', (e) => {
+    console.log('hi')
+    removePokemon(e)
+  })
+})
 
 
+function checkForWinner() {
+  if (document.querySelectorAll('.image').length === 0) 
+  // scoreBoard === 12;
+  {
+   alert('You win!')
+  }
+}
 
-
-
-
-
-
-
-// //making the pokemon to jump in CSS.
-  
-//   const scoreBoard = document.querySelector('.score')
-//   const grass = document.querySelectorAll(".grass")
-//   const pokemon = document.querySelectorAll(".pokemon")
-//   const pokemonImage = document.querySelectorAll('.image')
-//   let score = 0
-//   let timeLimit = 2000;
-//   let timeUp = false;
-// let countdown
-// //removing pokemon when clicked 
-  
-//   function removePokemon() {
-//     console.log(pokemon)
-//   }
-//  removePokemon()
-//  pokemon.forEach(pokemon => pokemon.addEventListener('click', removePokemon))
-  
- // score.addEventListener('click', score ++)
-  // img.addEventListener('click', removePokemon())
-
-  //recording score
-  // if user clicks on pokemon, they a point, otherwise, no points.
-  
-//start Game
-  
-  // function startGame(){
-  //   let countdown = timeLimit / 1000
-  //   scoreBoard.textContent = 0;
-  //   scoreBoard.style.display = `block`;
-  //   countdownBoard.textContent = countdown;
-  //   timeUp = false;
-  //   score = 0;
-  //   setTimeout(() => {
-  //     timeUp = true 
-  //   }, timeLimit);
-
-    
-  // }
-  
- 
-// function checkForWinner() {
-//   if (document.querySelectorAll('.pokemon').length === 0) 
-//   // scoreBoard === 12;
-//   {
-//    alert('You win!')
-//   }
-// }
-//   checkForWinner()
-  
-  
- 
-  
-// })
 
 
 
@@ -144,19 +87,7 @@ fetchPokemon()
 
   
 
-  // function pickRandomnPokemon() {
-  //   const randomImage = Math.floor(Math.random() * img.length);
-  //  // console.log(randomImage)
-  //   const images = img[randomImage];
-  //   console.log(images)
-  //   if (images === lastImage) {
-  //     return pickRandomnPokemon(images);
-  //   }
-  //   lastImage = images;
   
-  //   return images;
-  // }
-   
   // function jump() {
   
   //   let startingBottomValue = 50
