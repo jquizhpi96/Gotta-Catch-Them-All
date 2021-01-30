@@ -76,8 +76,8 @@ h3 {
 .image {
   /* transition: all 0.4s; */
   transition-timing-function: linear;
-  height: 70px;
-  width: 70px;
+  height: 60px;
+  width: 60px;
   transform-origin: bottom;
 
   animation-duration: 2s;

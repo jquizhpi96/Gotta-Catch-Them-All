@@ -9,20 +9,23 @@ async function fetchPokemon() {
       const response = await axios.get(allPokemon)
       //console.log(response.data)
       let data = response.data.sprites.front_default
-      console.log(data)
+     // console.log(data)
     
     } catch (error) {
     
     }
   }
 }   
-fetchPokemon()
 
-function createPokemon() {
-  let appendingPokemon = Math.round(Math.random() * 151)
-  console.log(appendingPokemon)
-}
-createPokemon(data)
+
+  let div = document.querySelector("#game")
+  console.log(div)
+
+// function createPokemon() {
+//   let appendingPokemon = Math.round(Math.random() * 150)
+//   console.log(appendingPokemon)
+// }
+// createPokemon()
 // const showPokeImage = ((pokemon) => {
 //   const pokeImage = `
 //   <img src='${pokemon.sprites.front_default}' alt ='Pokemon Image' class='image'>
