@@ -1,12 +1,13 @@
-// document.addEventListener('DOMContentLoaded', () => {
  // fetching api data.
  // const name = await axios.get(`https://cors-anywhere.herokuapp.com/${url.name}`)
+//  let music = document.querySelector('#music')
+// music.play()
 async function fetchPokemon() {
     let randomPokemonIndex = Math.round(Math.random() * 150)
     const onePokemon = `https://pokeapi.co/api/v2/pokemon/${randomPokemonIndex}`
     try {
       let response = await axios.get(onePokemon)
-    
+    //creating elements for the DOM
       let div = document.createElement('div')
       div.setAttribute("class", 'grass')
       
@@ -32,7 +33,7 @@ async function fetchPokemon() {
     
   }
 }   
-
+//fetching pokemon 12 times
 fetchPokemon()
 fetchPokemon()
 fetchPokemon()
@@ -46,10 +47,13 @@ fetchPokemon()
 fetchPokemon()
 fetchPokemon()
 
+
+//Tracking scoreboard
 let scoreBoard = document.querySelector('.score')
-console.log(scoreBoard)
+  //console.log(scoreBoard)
 let score = 0
 
+//Removing the Pokemon onced clicked.
 document.querySelector('.game').addEventListener('click', removePokemon) 
 
 function removePokemon(e) {
@@ -63,25 +67,30 @@ function removePokemon(e) {
 }
 removePokemon(e)
 
+//Checking for winners
 function checkForWinner() {
   if (document.querySelectorAll('.image').length === 0) 
   if( scoreboard = 12)
   
   {
-   alert('Congratulations!! You caught all the Pokemon!')
+   alert('Congratulations, you caught them all! Go out to the world and show the Pokemon Master you are.')
   }
 }
 
 
-//let timeUp = false
 
-// function startGame() {
-//   timeUp = false;
-//   scoreBoard.textContent = 0;
-//   setTimeout(()=> timeUp = true , 20000)
+// function timer(seconds) {
+//   const now = Date.now();
+//   const then = now + seconds * 1000;
 
-
+//   setInterval(() => {
+//     const secondsLeft = Math.round((then - Date.now()) / 1000)
+//     console.log(secondsLeft);
+    
+//   }, 1000);
 // }
+//  timer()
+
 
   
   // function jump() {

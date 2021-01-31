@@ -2,22 +2,20 @@
   box-sizing: border-box;
 }
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Coda Caption", sans-serif;
+  color: #fbe137;
   background-image: url("https://pa1.narvii.com/7288/b0bac31a96f24b565cc4742d3c35879eb0ed5b15r1-700-394_hq.gif");
   background-repeat: no-repeat;
   background-size: contain;
   position: relative;
-  background-color: yellowgreen;
+  background-color: #80c423;
   margin: 0;
   position: relative;
+  cursor: url("59-590145_pokeball-8-bit-pixel-art-pokemon-clipart.png"), auto;
 }
-/* .background{
-background-image: url("https://media-s3-us-east-1.ceros.com/hype-beast/images/2018/07/13/a9a51bc0b8d626db493ab5f9a971b043/background-hero.png");
 
-} */
-
-img.title {
-  top: 100px;
+.title {
+  margin-top: 100px;
 }
 
 main {
@@ -26,36 +24,72 @@ main {
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
-  top: 400px;
-  display: flexbox;
+
+  top: 215px;
 }
-button {
+#button {
   display: flex;
   margin: auto;
+  padding-left: 20px;
+  width: 120px;
+
+  font-size: 24px;
 }
 h1,
-h2,
-h3 {
+h2 {
   display: flex;
   justify-content: center;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+
+  animation-name: hop;
+  animation-timing-function: ease;
 }
+
+.score,
+button {
+  background-color: #0077b6;
+  font-family: "Coda Caption", sans-serif;
+  color: #fbe137;
+  box-sizing: border-box;
+  border: 2px #fbe137 solid;
+}
+.score {
+  vertical-align: baseline;
+  position: relative;
+  width: 125px;
+  padding: 10px;
+  margin-left: 10px;
+  top: 300px;
+  font-size: 24px;
+}
+#restart {
+  float: right;
+  width: 120px;
+  height: 56px;
+  margin-right: 10px;
+  top: 235px;
+  position: relative;
+  font-size: 24px;
+  box-sizing: border-box;
+}
+
 .game {
   display: flex;
   flex-wrap: wrap;
-
   box-sizing: border-box;
+  position: relative;
   margin-left: 200px;
   margin-right: 200px;
+  margin-top: 10px;
 }
 
 .grass {
   position: relative;
   flex: 1 0 25%;
   height: 200px;
+  width: auto;
   padding-top: 50px;
-}
-.grass {
-  /* content: ""; */
   display: block;
   background-image: url(grass.png);
   width: 100%;
@@ -63,11 +97,17 @@ h3 {
   background-size: cover;
   top: 10px;
 }
-/* h3 {
-  display: inline-block;
-  align-content: center;
-  margin-left: 280px;
-} */
+footer {
+  position: relative;
+  top: 215px;
+
+  background-color: #0077b6;
+}
+h5 {
+  margin-top: 0px;
+  text-align: center;
+  padding-top: 5px;
+}
 .pokemon {
   position: absolute;
   bottom: 10px;
@@ -78,12 +118,10 @@ h3 {
   margin-top: 20px;
 }
 .image {
-  /* transition: all 0.4s; */
   transition-timing-function: linear;
   height: 60px;
   width: 60px;
-
-  transform-origin: bottom;
+  margin-bottom: 12px;
 
   animation-duration: 2s;
   animation-iteration-count: infinite;
@@ -97,7 +135,7 @@ h3 {
     transform: translateY(0);
   }
   20% {
-    transform: translateY(-150px);
+    transform: translateY(-130px);
   }
 
   50% {
@@ -105,5 +143,56 @@ h3 {
   }
   100% {
     transform: translateY(0px);
+  }
+}
+.social {
+  display: inline-block;
+}
+.social img {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+#Left,
+#right {
+  margin-left: 5px;
+}
+
+a.link {
+  filter: invert(100%);
+}
+
+button:hover {
+  box-shadow: 15 15 15px #b3a700;
+  transition: 0.5s;
+  transform: scale(0.9);
+  z-index: -1;
+  border-radius: 10%;
+  background-color: blue;
+  box-shadow: 0 0 10px #0077b6;
+  text-shadow: 0 0 5px #b3a700;
+}
+
+@keyframes hop {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: 800x) {
+  main {
+    flex-direction: column;
+  }
+  main {
+    order: 0;
+  }
+  aside {
+    flex: 0;
   }
 }

@@ -6,6 +6,10 @@
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script defer src="./app.js"></script>
   <link rel="stylesheet" href="./style.css">
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+<link href="https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap" rel="stylesheet">
+
+  
 <title>Gotta Catch Them All</title>
 </head>
 <body>
@@ -14,16 +18,31 @@
     <img class= "title"src="https://fontmeme.com/permalink/210129/2b9b8976400dcf78ee450c643736b41d.png" alt="pokemon-font",border="0"></h1>
   <h2><img src="https://fontmeme.com/permalink/210129/75b7fe667a0ebc5d49e43383175e7a8a.png" alt="pokemon-font",border="0"></a></h2>
   </header>
-  <button  id="button" onclick="window.location.href='#start'">Start</button>
+  <audio src="kalos-titlescreen .wav" type = "audio/wav" id ="music"   autoplay="true"
+  muted="muted">></audio>
+  <button  id="button" onclick="window.location.href='#start'" onclick="play()">Start</button>
   
   <main>
-    <h3 class='score'>score:<span>0</span></h3> 
+    
+    <aside class='score'>score:0</aside> 
+    <aside><button onclick="window.location.reload()" id="restart">Restart</button></aside>
    <div id='start' class= "game"> 
    
-         
+   
    </div>
-   <button onclick="window.location.reload()" id="restart">Restart</button>
-  <!-- <h3 class= 'countdown'> countdown:</h3> -->
+   
+  </main>
+
+  
+
+
 </body>
+<footer>
+  <h5 id="footer-text">© Jason Quizhpi 2021
+    <div id="Left" class="social"> <a class='link'href ="https://github.com/jquizhpi96"><img src=" https://res.cloudinary.com/briandanger/image/upload/v1568954107/linkedin_vnvo6s.png" alt="LinkedIn"></a></div>
+    <div id="right" class="social"><a class='link'href="https://www.linkedin.com/in/jason-quizhpi-30a41b169/"><img src=" https://res.cloudinary.com/briandanger/image/upload/v1568954107/github_fpykxh.png"alt="Github"></a></div>
+    </a>
+  </h5>
+</footer>
 </html>
 
