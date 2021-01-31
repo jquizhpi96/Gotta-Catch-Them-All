@@ -39,17 +39,17 @@ The first frame is the going to be the introduction to the game where the user w
 After clickng the button the page will transition downward to another frame where the game will begin. A score and progress bar will be in place to keep track. Once the player completes the game the user will get an alert saying they won and will have the option to restart the game. 
 
 #### MVP 
-- Use external api to generate a set of 15 pokemon to appear in the game.
-- The pokemon will be jumping in and out of the grass at random.
-- Allow user to click on the pokemon signifying that they caught the pokemon.
-- There will be a time limit of 30 seconds to catch them all.
-- If the user beat the time limit, the user will get a congratulations alert with the pokemon caught, otherwise they will get the option to restart.
+- Use external api to generate a set of 12 pokemon to appear in the game.
+- The pokemon will be jumping in and out of the grass.
+- Allow user to click on the pokemon signifying that they caught the pokemon by having them disappear.
+- If the user catches all 12 pokemon, the user will get a congratulations alert with the pokemon caught, otherwise they will get the option to restart.
 - Different types of pokemon will generate every time the game restarts .
+- There will be a score board and progress bar to track how many pokemon the user caught.
 
 
 #### PostMVP  
-- Once caught you will get a brief information of the pokemon's name and type as well as their audio.
-- There will be a score board and progress bar to track how many pokemon the user caught.
+- Once caught, you will get a brief information of the pokemon's name and type as well as their audio.
+- There will be a time limit of 30 seconds to catch them all.
 
 ## Project Schedule
 
