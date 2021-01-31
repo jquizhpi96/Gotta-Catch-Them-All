@@ -53,8 +53,8 @@ let score = 0
 document.querySelector('.game').addEventListener('click', removePokemon) 
 
 function removePokemon(e) {
-  let clickPokemon = e
-   console.log(clickPokemon);
+  // let clickPokemon = e
+  //  console.log(clickPokemon);
   e.target.lastElementChild.remove()
   score++;
   scoreBoard.textContent = score
@@ -65,6 +65,7 @@ removePokemon(e)
 
 function checkForWinner() {
   if (document.querySelectorAll('.image').length === 0) 
+  if( scoreboard = 12)
   
   {
    alert('Congratulations!! You caught all the Pokemon!')
