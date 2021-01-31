@@ -63,11 +63,11 @@ h3 {
   background-size: cover;
   top: 10px;
 }
-h3 {
+/* h3 {
   display: inline-block;
   align-content: center;
   margin-left: 280px;
-}
+} */
 .pokemon {
   position: absolute;
   bottom: 10px;
@@ -96,14 +96,14 @@ h3 {
   0% {
     transform: translateY(0);
   }
-  30% {
+  20% {
     transform: translateY(-150px);
   }
 
-  60% {
-    transform: translateY(10px);
+  50% {
+    transform: translateY(0px);
   }
   100% {
-    transform: translateY(0);
+    transform: translateY(0px);
   }
 }

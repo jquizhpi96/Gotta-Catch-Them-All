@@ -1,7 +1,6 @@
 // document.addEventListener('DOMContentLoaded', () => {
  // fetching api data.
  // const name = await axios.get(`https://cors-anywhere.herokuapp.com/${url.name}`)
-
 async function fetchPokemon() {
     let randomPokemonIndex = Math.round(Math.random() * 150)
     const onePokemon = `https://pokeapi.co/api/v2/pokemon/${randomPokemonIndex}`
@@ -25,19 +24,15 @@ async function fetchPokemon() {
       
      let mainDiv = document.querySelector("#start")
       mainDiv.append(div)
-    
-      // create the div under response
-      // append to DOM
-      // create image, src,
-      checkForWinner()
-        removePokemon()
-        
+      
+      
        
     } catch (error) {
       console.log(error)
     
   }
 }   
+
 fetchPokemon()
 fetchPokemon()
 fetchPokemon()
@@ -51,41 +46,41 @@ fetchPokemon()
 fetchPokemon()
 fetchPokemon()
 
+let scoreBoard = document.querySelector('.score')
+console.log(scoreBoard)
+let score = 0
 
-function removePokemon() {
-  let pokemon = document.querySelectorAll('.pokemon')
-  console.log(pokemon)
-  // pokemons.style.display = 'none'
-  e.target.remove()
+document.querySelector('.game').addEventListener('click', removePokemon) 
+
+function removePokemon(e) {
+  let clickPokemon = e
+   console.log(clickPokemon);
+  e.target.lastElementChild.remove()
+  score++;
+  scoreBoard.textContent = score
+ 
+  checkForWinner()
 }
-console.log(pokemon)
-pokemon.forEach((poke) => {
-    console.log('hi')
-  poke.addEventListener('click', (e) => {
-    console.log('hi')
-    removePokemon(e)
-  })
-})
-
+removePokemon(e)
 
 function checkForWinner() {
   if (document.querySelectorAll('.image').length === 0) 
-  // scoreBoard === 12;
+  
   {
-   alert('You win!')
+   alert('Congratulations!! You caught all the Pokemon!')
   }
 }
 
 
+//let timeUp = false
+
+// function startGame() {
+//   timeUp = false;
+//   scoreBoard.textContent = 0;
+//   setTimeout(()=> timeUp = true , 20000)
 
 
-// let lastImage;
-  // let timeLimit = 20000;
-  // let score = 0;
-  // let countDown;
-  // const pokemons = document.querySelectorAll(".image")
-
-  
+// }
 
   
   // function jump() {
