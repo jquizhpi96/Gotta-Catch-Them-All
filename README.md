@@ -70,18 +70,57 @@ After clickng the button the page will transition downward to another frame wher
 
 | Component                                              | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------------------------------------------ | :------: | :------------: | :-----------: | :---------: |
-| HTML Structure                                         |    m     |      1hrs      |               |   30 mins   |
-| Basic CSS Styles                                       |    m     |      2hrs      |               |    1 hr     |
-| Categorying Start and Restart Buttons                  |    m     |     2 hrs      |               |   30 mins   |
-| Working with API to generate 12 pokemon at a time      |    H     |     4 hrs      |               |    5 hrs    |
-| Working with API to gather pokemon's information       |    H     |     3 hrs      |               |    6 hrs    |
-| Program the pokemon to jump and disappear when clicked |    H     |     4 hrs      |               |    4 hrs    |
-| Track and Display Score of User                        |    H     |     3 hrs      |               |    2 hr     |
-| Display the end results                                |    H     |     2 hrs      |               |    1 hr     |
-| CSS Flexbox and Animation                              |    H     |     5 hrs      |               |   10 hrs    |
-| Audio of pokemon and for background music              |    m     |     4 hrs      |               |    0 hr     |
-| Total                                                  |    H     |     30 hrs     |               |   30 hrs    |
+| HTML Structure                                         |    m     |      1hrs      |    30 mins    |   30 mins   |
+| Basic CSS Styles                                       |    m     |      2hrs      |     1 hr      |    1 hr     |
+| Categorying Start and Restart Buttons                  |    m     |     2 hrs      |    30 mins    |   30 mins   |
+| Working with API to generate 12 pokemon at a time      |    H     |     4 hrs      |     5 hrs     |    5 hrs    |
+| Working with API to gather pokemon's information       |    H     |     3 hrs      |     6 hrs     |    6 hrs    |
+| Program the pokemon to jump and disappear when clicked |    H     |     4 hrs      |     4 hrs     |    4 hrs    |
+| Track and Display Score of User                        |    H     |     3 hrs      |     2 hr      |    2 hrs    |
+| Display the end results                                |    H     |     2 hrs      |     1 hr      |    1 hr     |
+| CSS Flexbox and Animation                              |    H     |     5 hrs      |    10 hrs     |   10 hrs    |
+| Audio of pokemon and for background music              |    l     |     4 hrs      |     0 hr      |    0 hrs    |
+| Total                                                  |    H     |     30 hrs     |    30 hrs     |   30 hrs    |
+
+## Code Snippet
+
+Since the I wanted my game to refresh with different pokemon I had to use the Math.random function on my api call and I was so happy that I was able to achieve one of my MVP.
+
+async function fetchPokemon() {
+let randomPokemonIndex = Math.round(Math.random() \* 750)
+const onePokemon = `https://pokeapi.co/api/v2/pokemon/${randomPokemonIndex}`
+try {
+let response = await axios.get(onePokemon)
+//creating elements for the DOM
+let div = document.createElement('div')
+div.setAttribute("class", 'grass')
+
+      let secondDiv = document.createElement('div')
+      secondDiv.setAttribute("class", 'pokemon')
+
+     let imageofPokemon = document.createElement('img')
+      imageofPokemon.setAttribute('src', response.data.sprites.front_default)
+      imageofPokemon.setAttribute('alt', "pokemonImage")
+      imageofPokemon.setAttribute('class', 'image')
+
+      secondDiv.append(imageofPokemon)
+      div.append(secondDiv)
+
+     let mainDiv = document.querySelector("#start")
+      mainDiv.append(div)
+
+
+
+    } catch (error) {
+      console.log(error)
+
+}
+}
+
+fetchPokemon()
 
 ## Change Log
 
-I originally wanted to include background music to the game but Chrome's new policy doesn't allow autoplay music.
+I originally wanted to include background music to the game but Chrome's new policy doesn't allow autoplay music. I also wanted to include a progress bar but I decided not to because I felt like having the tracking score is enough for the user. I thought it would be too repitive to include the progress bar.
+
+I also wanted to include all the pokemon but sinc there is over 1,000, I decided to shorten my list to the pokemon that I felt people would know more off rather than having to show the generation of pokemon and having the user not know who they are.
