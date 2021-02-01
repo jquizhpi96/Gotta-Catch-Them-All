@@ -123,4 +123,4 @@ Since the I wanted my game to refresh with different pokemon on the screen, I ha
 
 I originally wanted to include background music to the game but Chrome's new policy doesn't allow autoplay music. I also wanted to include a progress bar but I decided not to because I felt like having the tracking score is enough for the user. I thought it would be too repitive to include the progress bar.
 
-I also wanted to include all the pokemon but sinc there is over 1,000, I decided to shorten my list to the pokemon that I felt people would know more off rather than having to show the generation of pokemon and having the user not know who they are.
+I also wanted to include all the pokemon but sinc there is over 1,000, I decided to shorten my list to the pokemon that I felt people would know more off rather than having to show a the new generation of pokemon and having the user not know who they are.
