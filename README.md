@@ -1,6 +1,7 @@
 # Gotta-Catch-Them-All
 
 Your objective is to catch the 12 Pokemon in the wild in order to become a Pokemon Master.
+
 {link} (https://jquizhpi96.github.io/Gotta-Catch-Them-All/#start)
 
 ## API and Data Sample
