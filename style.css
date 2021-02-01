@@ -16,6 +16,7 @@ body {
 
 .title {
   margin-top: 100px;
+  margin-left: 150px;
 }
 
 main {
@@ -24,29 +25,25 @@ main {
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
-
   top: 215px;
 }
+
 #button {
   display: flex;
   margin: auto;
   padding-left: 20px;
   width: 120px;
-
   font-size: 24px;
 }
+
 h1,
 .subtitle {
   display: flex;
-  justify-content: center;
+  margin: auto;
   animation-duration: 2s;
   animation-iteration-count: infinite;
-
   animation-name: hop;
   animation-timing-function: ease;
-}
-.subtitle {
-  margin-left: 100px;
 }
 
 .score,
@@ -84,7 +81,6 @@ button {
   position: relative;
   margin-left: 200px;
   margin-right: 200px;
-  margin-top: 10px;
 }
 
 .grass {
@@ -98,7 +94,6 @@ button {
   width: 100%;
   height: 185px;
   background-size: cover;
-  top: 10px;
 }
 footer {
   position: relative;
@@ -190,10 +185,6 @@ button:hover {
 }
 
 @media screen and (max-width: 1105px) {
-  body {
-    background-color: blue;
-  }
-
   .title {
     width: 800px;
     left: 30px;
@@ -256,18 +247,48 @@ button:hover {
     font-size: 16px;
   }
 }
-
 @media screen and (max-width: 800px) {
-  .title {
-    width: 500px;
-    left: 30px;
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+
+    flex-direction: column;
+    top: 0px;
   }
-  .subtitle {
-    width: 400px;
-    margin-left: 200px;
+  footer {
+    top: 0;
   }
-  h2 {
-    align-content: center;
+  .score {
+    top: 55px;
+    margin-left: 10px;
+  }
+  #restart {
+    top: 0;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  #button {
+    margin: auto;
+  }
+  aside {
+    order: 3;
+  }
+  .grass {
+    position: relative;
+    padding-top: 50px;
+    display: flex;
+    width: 10px;
+    height: 185px;
+    top: 10px;
+  }
+  .game {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  h5 {
+    margin-bottom: 0;
   }
 }
 @media screen and (max-width: 700px) {
@@ -286,68 +307,41 @@ button:hover {
     top: 60px;
   }
 }
-@media screen and (max-width: 600px) {
-  body {
-    flex-direction: column;
-    display: flex;
-  }
-  .title {
-    width: 400px;
-    left: 30px;
-  }
-  /* .subtitle {
-    width: 300px;
-  } */
 
+@media screen and (max-width: 400px) {
   main {
-    top: 0px;
-  }
-  footer {
-    top: 0px;
-    padding-bottom: 10px;
-  }
-  .score {
-    height: 34px;
-    width: 64px;
-    font-size: 12px;
-    padding: 5px;
-  }
-  #restart {
-    order: 1;
-    height: 34px;
-    width: 64px;
-    margin-right: 10px;
-    top: 265px;
-    left: 0px;
-    font-size: 12px;
-  }
-  #button {
-    height: 34px;
-    width: 64px;
-    font-size: 12px;
-    padding: 7px;
-    padding-left: 12px;
-  }
-  .grass {
-    position: relative;
-    flex: 1 0 25%;
-    height: 200px;
-    width: auto;
-    padding-top: 50px;
-    display: block;
-    background-image: url(grass.png);
-    width: 100%;
-    height: 185px;
-    background-size: cover;
-    top: 10px;
-  }
-  .game {
     display: flex;
     flex-wrap: wrap;
-    box-sizing: border-box;
-    position: relative;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-top: 0px;
+    text-align: center;
+
+    flex-direction: column;
+    top: 0px;
+  }
+  .title {
+    margin-top: 10px;
+    width: 350px;
+  }
+  .subtitle {
+    width: 350px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+
+    flex-direction: column;
+    top: 0px;
+  }
+  .title {
+    margin-top: 10px;
+    width: 350px;
+  }
+  .subtitle {
+    width: 350px;
+    margin: auto;
   }
 }
