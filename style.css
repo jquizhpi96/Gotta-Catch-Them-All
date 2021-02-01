@@ -207,6 +207,7 @@ button:hover {
   .title {
     width: 700px;
     left: 30px;
+    margin-left: 70px;
   }
   .subtitle {
     width: 500px;
@@ -290,21 +291,49 @@ button:hover {
   h5 {
     margin-bottom: 0;
   }
+  .title {
+    margin-left: 15px;
+  }
 }
 @media screen and (max-width: 700px) {
   .title {
     width: 500px;
-    left: 30px;
+
+    margin: auto;
+    padding: 50px;
   }
   .subtitle {
     width: 400px;
     margin-left: 100px;
   }
   main {
-    top: 60px;
+    top: 20px;
   }
   footer {
-    top: 60px;
+    top: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+
+    flex-direction: column;
+    top: 0px;
+  }
+  .title {
+    margin-top: 10px;
+    width: 350px;
+    margin: auto;
+  }
+  .subtitle {
+    width: 350px;
+    margin: auto;
+  }
+  footer {
+    top: 0;
   }
 }
 
@@ -318,30 +347,14 @@ button:hover {
     top: 0px;
   }
   .title {
-    margin-top: 10px;
-    width: 350px;
+    margin: auto;
+    width: auto;
   }
   .subtitle {
     width: 350px;
     margin: auto;
   }
-}
-
-@media screen and (max-width: 400px) {
-  main {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-
-    flex-direction: column;
-    top: 0px;
-  }
-  .title {
-    margin-top: 10px;
-    width: 350px;
-  }
-  .subtitle {
-    width: 350px;
-    margin: auto;
+  footer {
+    top: 0;
   }
 }

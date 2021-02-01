@@ -73,7 +73,7 @@ function checkForWinner() {
   if( scoreboard = 12)
   
   {
-   alert('Congratulations, you caught them all! Go out to the world and show the Pokemon Master you are.')
+   alert('Congratulations, you got them all! Now go and show off your new Pokemon!')
   }
 }
 
