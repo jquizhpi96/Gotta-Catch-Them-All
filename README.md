@@ -88,17 +88,17 @@ Since the I wanted my game to refresh with different pokemon I had to use the Ma
 
 async function fetchPokemon() {
 let randomPokemonIndex = Math.round(Math.random() \* 750)
-const onePokemon = `https://pokeapi.co/api/v2/pokemon/${randomPokemonIndex}`
+const onePokemon = `https://pokeapi.co/api/v2/pokemon/$ {randomPokemonIndex}`
 try {
 let response = await axios.get(onePokemon)
-//creating elements for the DOM
-let div = document.createElement('div')
-div.setAttribute("class", 'grass')
+
+      let div = document.createElement('div')
+      div.setAttribute("class", 'grass')
 
       let secondDiv = document.createElement('div')
       secondDiv.setAttribute("class", 'pokemon')
 
-     let imageofPokemon = document.createElement('img')
+      let imageofPokemon = document.createElement('img')
       imageofPokemon.setAttribute('src', response.data.sprites.front_default)
       imageofPokemon.setAttribute('alt', "pokemonImage")
       imageofPokemon.setAttribute('class', 'image')
@@ -106,7 +106,7 @@ div.setAttribute("class", 'grass')
       secondDiv.append(imageofPokemon)
       div.append(secondDiv)
 
-     let mainDiv = document.querySelector("#start")
+      let mainDiv = document.querySelector("#start")
       mainDiv.append(div)
 
 
