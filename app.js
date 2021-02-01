@@ -79,37 +79,8 @@ function checkForWinner() {
 
 
 
-// function timer(seconds) {
-//   const now = Date.now();
-//   const then = now + seconds * 1000;
 
-//   setInterval(() => {
-//     const secondsLeft = Math.round((then - Date.now()) / 1000)
-//     console.log(secondsLeft);
-    
-//   }, 1000);
-// }
-//  timer()
 
 
   
-  // function jump() {
   
-  //   let startingBottomValue = 50
-  //   const image = randomPokemon(img)
-  //   // console.log(image)
-    
-  //   const moveImg = function (image) {
-     
-  //     image.style.bottom = startingBottomValue + 100 + 'px'
-  //     setTimeout(() => {
-  //       image.style.bottom = startingBottomValue + 'px'
-  //     }, 1000)
-  //     if (!timeLimit) jump();
-  //     // console.log(moveImg)
-  //   }
-  //   setInterval(() => {
-  //     (moveImg(image))
-  //   }, 2000);
-  // }
-  // jump()
