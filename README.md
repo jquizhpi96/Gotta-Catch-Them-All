@@ -72,7 +72,7 @@ After clickng the button the page will transition downward to another frame wher
 ## Timeframes
 
 | Component                                              | Priority | Estimated Time | Time Invested | Actual Time |
-| ------------------------------------------------------ | :------: | :------------: | :-----------: | :---------: |
+| ------------------------------------------------------ | :------: | :------------: | :-----------: | :---------: | --- | ---- |
 | HTML Structure                                         |    m     |      1hrs      |               |   30 mins   |
 | Basic CSS Styles                                       |    m     |      2hrs      |               |    1 hr     |
 | Categorying Start and Restart Buttons                  |    m     |     2 hrs      |               |   30 mins   |
@@ -82,7 +82,7 @@ After clickng the button the page will transition downward to another frame wher
 | Track and Display Score of User                        |    H     |     3 hrs      |               |    2 hr     |
 | Display the end results                                |    H     |     2 hrs      |               |    1 hr     |
 | CSS Flexbox and Animation                              |    H     |     5 hrs      |               |   10 hrs    |
-| Audio of pokemon and for background music              |    H     |     4 hrs      |               |    0 hr     |
+| Audio of pokemon and for background music              |    m     |     4 hrs      |               |    0 hr     |     | 0 hr |
 | Total                                                  |    H     |     30 hrs     |               |   30 hrs    |
 
 ## Change Log
