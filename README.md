@@ -84,13 +84,13 @@ After clickng the button the page will transition downward to another frame wher
 
 ## Code Snippet
 
-Since the I wanted my game to refresh with different pokemon I had to use the Math.random function on my api call and I was so happy that I was able to achieve one of my MVP.
+Since the I wanted my game to refresh with different pokemon on the screen, I had to use the Math.random function on my api call and I was so happy that I was able to achieve one of my MVP.
 
-async function fetchPokemon() {
-let randomPokemonIndex = Math.round(Math.random() \* 750)
-const onePokemon = `https://pokeapi.co/api/v2/pokemon/$ {randomPokemonIndex}`
-try {
-let response = await axios.get(onePokemon)
+      async function fetchPokemon() {
+      let randomPokemonIndex = Math.round(Math.random() \* 750)
+      const onePokemon = `https://pokeapi.co/api/v2/pokemon/$ {randomPokemonIndex}`
+      try {
+      let response = await axios.get(onePokemon)
 
       let div = document.createElement('div')
       div.setAttribute("class", 'grass')
@@ -114,10 +114,10 @@ let response = await axios.get(onePokemon)
     } catch (error) {
       console.log(error)
 
-}
-}
+        }
+        }
 
-fetchPokemon()
+        fetchPokemon()
 
 ## Change Log
 
