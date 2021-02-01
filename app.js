@@ -3,7 +3,7 @@
 //  let music = document.querySelector('#music')
 // music.play()
 async function fetchPokemon() {
-    let randomPokemonIndex = Math.round(Math.random() * 150)
+    let randomPokemonIndex = Math.round(Math.random() * 750)
     const onePokemon = `https://pokeapi.co/api/v2/pokemon/${randomPokemonIndex}`
     try {
       let response = await axios.get(onePokemon)
