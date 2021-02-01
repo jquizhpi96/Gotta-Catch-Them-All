@@ -60,7 +60,7 @@ After clickng the button the page will transition downward to another frame wher
 | Jan 27    | Core Application Structure (HTML, CSS, etc.)       | completed |
 | Jan 28    | Initial Clickable Model                            | completed |
 | Jan 29    | MVP                                                | completed |
-| Feb 1     | Presentations/Project Submission                   |
+| Feb 1     | Presentations/Project Submission                   | completed |
 
 ## Priority Matrix
 
