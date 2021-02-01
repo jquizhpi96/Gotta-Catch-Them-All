@@ -31,9 +31,6 @@ Your objective is to catch the 15 Pokemon in the wild in order to become a Pokem
             "url": "https://pokeapi.co/api/v2/pokemon-form/25/"
         }
 
-
-
-
 ## Wireframes
 
 {link} (https://whimsical.com/gotta-catch-them-all-S2sQkbNktefqodKcU7xKyr)
@@ -56,13 +53,13 @@ After clickng the button the page will transition downward to another frame wher
 
 ## Project Schedule
 
-| Day       | Deliverable                                        | Status |
-| --------- | -------------------------------------------------- | ------ | --------- |
-| Jan 25-26 | Prompt / Wireframes / Priority Matrix / Timeframes |
-| Jan 26    | Project Approval                                   |        | completed |
-| Jan 27    | Core Application Structure (HTML, CSS, etc.)       |        | completed |
-| Jan 28    | Initial Clickable Model                            |        | completed |
-| Jan 29    | MVP                                                |        | completed |
+| Day       | Deliverable                                        | Status    |
+| --------- | -------------------------------------------------- | --------- |
+| Jan 25-26 | Prompt / Wireframes / Priority Matrix / Timeframes | completed |
+| Jan 26    | Project Approval                                   | completed |
+| Jan 27    | Core Application Structure (HTML, CSS, etc.)       | completed |
+| Jan 28    | Initial Clickable Model                            | completed |
+| Jan 29    | MVP                                                | completed |
 | Feb 1     | Presentations/Project Submission                   |
 
 ## Priority Matrix
