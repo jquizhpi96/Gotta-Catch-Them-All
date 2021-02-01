@@ -44,7 +44,7 @@ After clickng the button the page will transition downward to another frame wher
 - Allow user to click on the pokemon signifying that they caught the pokemon by having them disappear.
 - If the user catches all 12 pokemon, the user will get a congratulations alert with the pokemon caught, otherwise they will get the option to restart.
 - Different types of pokemon will generate every time the game restarts .
-- There will be a score board and progress bar to track how many pokemon the user caught.
+- There will be a score board to track how many pokemon the user caught.
 
 
 #### PostMVP  
