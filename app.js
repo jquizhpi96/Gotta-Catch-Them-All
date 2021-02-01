@@ -1,4 +1,7 @@
  // fetching api data.
+ // const name = await axios.get(`https://cors-anywhere.herokuapp.com/${url.name}`)
+//  let music = document.querySelector('#music')
+// music.play()
 async function fetchPokemon() {
     let randomPokemonIndex = Math.round(Math.random() * 150)
     const onePokemon = `https://pokeapi.co/api/v2/pokemon/${randomPokemonIndex}`
@@ -45,7 +48,10 @@ fetchPokemon()
 fetchPokemon()
 
 
-
+//Tracking scoreboard
+let scoreBoard = document.querySelector('.score')
+  //console.log(scoreBoard)
+let score = 0
 
 //Removing the Pokemon onced clicked.
 document.querySelector('.game').addEventListener('click', removePokemon) 
@@ -61,21 +67,49 @@ function removePokemon(e) {
 }
 removePokemon(e)
 
-//Tracking scoreboard
-let scoreBoard = document.querySelector('.score')
-  //console.log(scoreBoard)
-let score = 0
-
 //Checking for winners
 function checkForWinner() {
   if (document.querySelectorAll('.image').length === 0) 
   if( scoreboard = 12)
   
   {
-   alert('Congratulations, you got them all! Now go and show off your new Pokemon!')
+   alert('Congratulations, you got them all! Now go and show off your new Pokemon! :)')
   }
 }
 
 
 
+// function timer(seconds) {
+//   const now = Date.now();
+//   const then = now + seconds * 1000;
 
+//   setInterval(() => {
+//     const secondsLeft = Math.round((then - Date.now()) / 1000)
+//     console.log(secondsLeft);
+    
+//   }, 1000);
+// }
+//  timer()
+
+
+  
+  // function jump() {
+  
+  //   let startingBottomValue = 50
+  //   const image = randomPokemon(img)
+  //   // console.log(image)
+    
+  //   const moveImg = function (image) {
+     
+  //     image.style.bottom = startingBottomValue + 100 + 'px'
+  //     setTimeout(() => {
+  //       image.style.bottom = startingBottomValue + 'px'
+  //     }, 1000)
+  //     if (!timeLimit) jump();
+  //     // console.log(moveImg)
+  //   }
+  //   setInterval(() => {
+  //     (moveImg(image))
+  //   }, 2000);
+  // }
+  // jump()
